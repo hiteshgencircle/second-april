@@ -1,0 +1,66 @@
+// Merge your values into Bootstrap's map
+$position-values: map-merge(
+    (
+      0: 0,
+      50: 50%,
+      100: 100%
+    ),
+    (
+      20: 20px,
+      27: 27px,
+      82: 82px,
+      "n50": -50%,   // negative for centering tricks
+    )
+);
+
+.recipe-block .banner-text{
+  bottom: 50px;
+}
+
+/* Extra padding at bottom for pagination dots */
+.recipe-block .swiper {
+  padding-bottom: 48px !important;
+}
+
+/* Equal-height slides */
+.recipe-block .swiper-slide {
+  height: auto;
+}
+.recipe-block .swiper-slide-btn{
+  background:#8DCF27 !important;
+}
+
+/* Optional: ensure image fills height evenly */
+.recipe-block .object-fit-cover {
+  object-fit: cover;
+}
+
+/* Full-viewport hero (e.g. landing page top) */
+.recipe-block .hero-fullscreen {
+  height: 100vh;   /* or min-height: 100vh */
+}
+
+/* Gradient overlay instead of solid black */
+.recipe-block .overlay-gradient {
+  background: linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.1) 0%,
+      rgba(0,0,0,0.65) 100%
+  );
+}
+
+/* Left-aligned text version */
+.recipe-block .overlay-left {
+  align-items: flex-start !important;
+  text-align: left !important;
+  padding-left: 3rem;
+}
+
+.recipe-block .card-btn{
+  color: #000000;
+  background-color: #8DCF27;
+}
+.recipe-block .card-btn:hover{
+  background-color: #6da020;
+  color: #000;
+}
