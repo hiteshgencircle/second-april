@@ -12,55 +12,60 @@ $position-values: map-merge(
       "n50": -50%,   // negative for centering tricks
     )
 );
+$brand-green: #8dcf27;
+$brand-green-dark: #6da020;
+.recipe-block {
+  // Banner
+  .banner-text {
+    bottom: 50px;
+  }
 
-.recipe-block .banner-text{
-  bottom: 50px;
-}
+  // Swiper
+  .swiper {
+    padding-bottom: 48px !important; // Extra padding for pagination dots
+  }
 
-/* Extra padding at bottom for pagination dots */
-.recipe-block .swiper {
-  padding-bottom: 48px !important;
-}
+  .swiper-slide {
+    height: auto; // Equal-height slides
 
-/* Equal-height slides */
-.recipe-block .swiper-slide {
-  height: auto;
-}
-.recipe-block .swiper-slide-btn{
-  background:#8DCF27 !important;
-}
+    &-btn {
+      background: $brand-green !important;
+    }
+  }
 
-/* Optional: ensure image fills height evenly */
-.recipe-block .object-fit-cover {
-  object-fit: cover;
-}
+  // Image
+  .object-fit-cover {
+    object-fit: cover;
+  }
 
-/* Full-viewport hero (e.g. landing page top) */
-.recipe-block .hero-fullscreen {
-  height: 100vh;   /* or min-height: 100vh */
-}
+  // Hero
+  .hero-fullscreen {
+    height: 100vh;
+  }
 
-/* Gradient overlay instead of solid black */
-.recipe-block .overlay-gradient {
-  background: linear-gradient(
-      to bottom,
-      rgba(0,0,0,0.1) 0%,
-      rgba(0,0,0,0.65) 100%
-  );
-}
+  // Overlays
+  .overlay-gradient {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.1) 0%,
+        rgba(0, 0, 0, 0.65) 100%
+    );
+  }
 
-/* Left-aligned text version */
-.recipe-block .overlay-left {
-  align-items: flex-start !important;
-  text-align: left !important;
-  padding-left: 3rem;
-}
+  .overlay-left {
+    align-items: flex-start !important;
+    text-align: left !important;
+    padding-left: 3rem;
+  }
 
-.recipe-block .card-btn{
-  color: #000000;
-  background-color: #8DCF27;
-}
-.recipe-block .card-btn:hover{
-  background-color: #6da020;
-  color: #000;
+  // Card button
+  .card-btn {
+    color: #000;
+    background-color: $brand-green;
+
+    &:hover {
+      background-color: $brand-green-dark;
+      color: #000;
+    }
+  }
 }
